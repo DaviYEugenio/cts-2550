@@ -61,6 +61,12 @@ public static Var EventoMedico() throws Exception {
     cronapi.list.Operations.getFirst((
     cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.id from User u where u.userName = :userName"),Var.valueOf("userName",
     cronapi.util.Operations.getCurrentUserName()))))));
+
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
+    Var.valueOf("modalMedico"));
+
+    cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
+    Var.valueOf("Cadastrado com sucesso"));
     return Var.VAR_NULL;
    }
  }.call();

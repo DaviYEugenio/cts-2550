@@ -17,7 +17,7 @@ public static final int TIMEOUT = 300;
  * @return Var
  */
 // Modal
-public static Var Executar() throws Exception {
+public static Var AbrirModal() throws Exception {
  return new Callable<Var>() {
 
    public Var call() throws Exception {
