@@ -1,0 +1,189 @@
+{
+  "customId": "query418433",
+  "queryName": "MinhaAgenda",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Agenda",
+  "entityFullName": "app.entity.Agenda",
+  "query": {
+    "isValid": true,
+    "isEmpty": false,
+    "operationType": "object",
+    "type": "select",
+    "rulesEntity": [
+      {
+        "entity": "Agenda",
+        "namespace": "app.entity.Agenda",
+        "alias": "a"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a",
+        "type": "string"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "rules": [
+        {
+          "id": "a.user.id",
+          "field": "a.user.id",
+          "type": "string",
+          "input": "text",
+          "operator": "equal",
+          "value": ":userId",
+          "valueIsField": false
+        }
+      ],
+      "not": false,
+      "valid": true
+    },
+    "isRawSql": false,
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "IdDoUsuarioLogado",
+        "blocklyClass": "blockly.TesteAgenda",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.TesteAgenda",
+          "sourcePath": "src/main/java/blockly/TesteAgenda.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "LoginDoUsuario",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "IdDoUsuarioLogado",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "titulo": null,
+    "nomeDoEvento": null,
+    "dataEHoraDeInicioDoEvento": null,
+    "dataEHoraDoFimDoEvento": null,
+    "fusoDaDataInicial": null,
+    "fusoDaDataFinal": null,
+    "descricaoDoEvento": null,
+    "regrasDeRepeticoes": null,
+    "regrasRepeticoes": null,
+    "excecoesDasRegrasDeRepeticoes": null,
+    "eventosDeDiaInteiro": null,
+    "user": {
+      "type": "server",
+      "blocklyMethod": "IdDoUsuarioLogado",
+      "blocklyClass": "blockly.TesteAgenda",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.TesteAgenda",
+        "sourcePath": "src/main/java/blockly/TesteAgenda.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "LoginDoUsuario",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "IdDoUsuarioLogado",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    }
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "titulo": null,
+    "nomeDoEvento": null,
+    "dataEHoraDeInicioDoEvento": null,
+    "dataEHoraDoFimDoEvento": null,
+    "fusoDaDataInicial": null,
+    "fusoDaDataFinal": null,
+    "descricaoDoEvento": null,
+    "regrasDeRepeticoes": null,
+    "regrasRepeticoes": null,
+    "excecoesDasRegrasDeRepeticoes": null,
+    "eventosDeDiaInteiro": null,
+    "user": null
+  },
+  "security": {
+    "id": null,
+    "titulo": null,
+    "nomeDoEvento": null,
+    "dataEHoraDeInicioDoEvento": null,
+    "dataEHoraDoFimDoEvento": null,
+    "fusoDaDataInicial": null,
+    "fusoDaDataFinal": null,
+    "descricaoDoEvento": null,
+    "regrasDeRepeticoes": null,
+    "regrasRepeticoes": null,
+    "excecoesDasRegrasDeRepeticoes": null,
+    "eventosDeDiaInteiro": null,
+    "user": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query418433/",
+  "audit": false
+}
