@@ -1,6 +1,6 @@
 window.fixedTimeZone = true;
-window.timeZone = 'UTC';
-window.timeZoneOffset = 0;
+window.timeZone = 'America/Sao_Paulo';
+window.timeZoneOffset = -180;
 window.blockly = window.blockly || {};
 window.blockly.js = window.blockly.js || {};
 window.blockly.js.blockly = window.blockly.js.blockly || {};
