@@ -67,6 +67,10 @@ public static Var EventoMedico() throws Exception {
 
     cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"),
     Var.valueOf("Cadastrado com sucesso"));
+
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+    Var.valueOf("MinhaAgenda"),
+    Var.valueOf("false"));
     return Var.VAR_NULL;
    }
  }.call();
