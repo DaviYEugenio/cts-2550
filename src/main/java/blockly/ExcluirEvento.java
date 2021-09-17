@@ -28,9 +28,14 @@ public static Var ExcluindoEvento() throws Exception {
     cronapi.screen.Operations.getValueOfField(
     Var.valueOf("vars.excluirevento"));
 
-    cronapi.util.Operations.callClientFunction( Var.valueOf("cronapi.screen.notify"), Var.valueOf("success"), evento);
+    cronapi.database.Operations.execute(Var.valueOf("app.entity.Agenda"), Var.valueOf("delete from Agenda where id = :id"),Var.valueOf("id",evento));
 
-    cronapi.database.Operations.execute(Var.valueOf("app.entity.Agenda"), Var.valueOf("delete from Agenda where titulo = :titulo"),Var.valueOf("titulo",evento));
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.hideModal"),
+    Var.valueOf("ExcluirEvento"));
+
+    cronapi.util.Operations.callClientFunction(Var.valueOf("cronapi.screen.refreshDatasource"),
+    Var.valueOf("MinhaAgenda"),
+    Var.valueOf("false"));
     return Var.VAR_NULL;
    }
  }.call();
